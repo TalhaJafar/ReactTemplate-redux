@@ -20,7 +20,7 @@ export const SecondaryButton = ({ title, onClick, disabled, className }) => {
 
   return (
     <Button 
-        variant="primary" 
+        variant="info" 
         disabled={disabled}
         onClick={onClick}
         className={className}
