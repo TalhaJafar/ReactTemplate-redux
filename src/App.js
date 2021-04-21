@@ -1,14 +1,22 @@
-import {PrimaryButton, SecondaryButton} from './components/general/AppButtton'
-import AppLoader from './components/general/AppLoader'
+import { Route, Switch } from "react-router-dom";
+import Navbar from './components/general/Navbar/navbar'
+//css
 import './App.scss'
 
-function App() {
+//pages
+import Home from './pages/Home'
+import About from './pages/About'
+
+
+const App = () =>{
   return (
-    <div>
-      <PrimaryButton title="Press Here" onClick={() => {console.log("pressed")}} className="over" disabled={true}/>
-      <SecondaryButton title="Secondary Here" className="over" />
-      <AppLoader size={50}color="yellow" />
-    </div>
+    <>
+      <Navbar/>
+      <Switch>
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/about" component={About}/>
+      </Switch>
+    </>
   );
 }
 

@@ -1,12 +1,12 @@
 import React from "react";
 import {Link} from 'react-router-dom'
-const About = () => {
+const Home = () => {
     return(
         <div>
-            About Page
-            <Link to="/">Home</Link>
+            Home Page
+            <Link to="/about">About</Link>
         </div>
     )
 }
 
-export default About;
+export default Home;
